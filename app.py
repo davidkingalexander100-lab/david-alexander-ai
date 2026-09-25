@@ -45,7 +45,7 @@ def chat_fn(msg, hist):
     return f"{intro}\n\n{picks[0][:1200]}\n\n---\n\nAnd this:\n{picks[1][:800]}\n\n🔥 Action: Take one line and speak it out loud today. Word made flesh."
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# DAVID ALEXANDER AI\n### I set myself ablaze for the world to watch me burn\nNo numbers. Just my actual words, dynamic.")
+    gr.Markdown("# DAVID ALEXANDER AI\n### I set myself ablaze for the world to watch me burn\nSelf Therapy. Whats on your mind today?.")
     gr.ChatInterface(chat_fn, examples=["I'm stuck", "Talk about words", "I feel pain", "How do I reprogram?"])
 
 demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
